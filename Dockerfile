@@ -119,5 +119,6 @@ RUN pyenv install $PYTHON_VERSION \
 
 ENV PYTHONIOENCODING=utf-8
 
+COPY discover-test.py /usr/bin/discover-test
 COPY docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

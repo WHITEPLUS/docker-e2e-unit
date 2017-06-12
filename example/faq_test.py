@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-class LenetQuestions(unittest.TestCase):
+class FAQ(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Remote(
@@ -23,5 +23,3 @@ class LenetQuestions(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
-if __name__ == "__main__":
-    unittest.main()
