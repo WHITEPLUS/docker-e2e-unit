@@ -1,6 +1,6 @@
 NAME      := e2e-uat
 REGISTRY  := whiteplus/$(NAME)
-VERSION   := 20170815
+VERSION   := 20171227
 
 .PHONY: build push example
 
