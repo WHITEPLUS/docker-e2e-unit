@@ -27,28 +27,3 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-s
 
 USER seluser
 
-#==================
-# Anyenv
-#==================
-# ENV HOME /home/seluser
-# ENV ANYENV_HOME $HOME/.anyenv
-# ENV ANYENV_ENV  $ANYENV_HOME/envs
-# RUN git clone https://github.com/riywo/anyenv $ANYENV_HOME
-# ENV PATH $ANYENV_HOME/bin:$PATH
-# RUN mkdir $ANYENV_ENV
-
-
-#==================
-# Python3
-#==================
-# ARG PYTHON_VERSION=3.6.1
-# RUN anyenv install pyenv
-# ENV PATH $ANYENV_ENV/pyenv/bin:$ANYENV_ENV/pyenv/shims:$PATH
-# ENV PYENV_ROOT $ANYENV_ENV/pyenv
-# COPY require.txt /tmp/require.txt
-# RUN pyenv install $PYTHON_VERSION \
-#  && pyenv global $PYTHON_VERSION \
-#  && pyenv rehash \
-#  && pip install -r /tmp/require.txt
-#
-# ENV PYTHONIOENCODING=utf-8
